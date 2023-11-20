@@ -5,20 +5,29 @@ class Tarefa:
     horaI = '' # hora de inicio
     horaT = '' # hora de termino
     usuario = None  # usuario da tarefa
-    alarme = []
+    alarmes = []
 
-    def __init__(self,d,hi,ht, u):
-      self.descriçao = d # chamando a variavel 
-      self.horaI = hi
-      self.horaT = ht
-      self.usuario = u
-    
+    def __init__(self, descricao, hora_inicio, hora_termino, usuario):
+        self.descricao = descricao
+        self.hora_inicio = hora_inicio
+        self.hora_termino = hora_termino
+        self.usuario = usuario
+        self.alarmes = []
+
     def criarAlarme(self):
-      at = Alarme()
-      self.alarme.append(at)
+        alarme = Alarme()
+        self.alarmes.append(alarme)
 
-    def excluirAlarme(self,i):
-      self.alarme.pop(i)
+    def excluirAlarme(self, indice):
+        if 0 <= indice < len(self.alarmes):
+            self.alarmes.pop(indice)
+        else:
+            print("Índice inválido para exclusão de alarme.")
+
+    def __str__(self):
+        alarmes_str = "\n".join(str(alarme) for alarme in self.alarmes)
+        return f"Descrição: {self.descricao}\nHora de Início: {self.hora_inicio}\nHora de Término: {self.hora_termino}\nUsuário: {self.usuario}\n"
+    
 
 
       

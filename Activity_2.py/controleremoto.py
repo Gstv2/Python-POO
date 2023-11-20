@@ -5,7 +5,7 @@ class Controle_remoto:
         self.t = Televisao()
 
     def aumentarV(self):
-        if self.t.volume < 60.0:
+        if self.t.volume <= 60.0:
             self.t.volume += 1.0
         else:
             print('Volume no máximo')
@@ -16,8 +16,17 @@ class Controle_remoto:
         else:
             print('Volume no mínimo')
 
+    def canalD(self):
+        if self.t.canal <= 60:
+            self.t.canal += 1
+        else:
+            print('Canal não existente')
+
     def canalE(self):
-        print('Changing channel')
+        if self.t.canal >= 1:
+            self.t.canal -= 1
+        else:
+            print('Canal não existente')
 
     def canalavolume(self):
         print(f'TV: {self.t}')

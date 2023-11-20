@@ -1,11 +1,17 @@
 from controleremoto import Controle_remoto
 
-c = Controle_remoto()
-c.aumentarV()
-c.aumentarV()
-c.aumentarV()
-for i in range(10):
-    c.diminuirV
-c.aumentarV()
-c.aumentarV()
-c.canalavolume()
+controle = Controle_remoto()
+
+for i in range(65):
+    controle.aumentarV()
+
+for i in range(1):
+    controle.diminuirV()
+
+for i in range(50):
+    controle.canalD()
+
+for i in range(30):
+    controle.canalE()
+
+controle.canalavolume()

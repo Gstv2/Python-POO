@@ -14,4 +14,4 @@ class Usuario:
     def criarTarefa(self, d, hi, ht, u):
         t = Tarefa( d, hi, ht, u)
         self.tarefas.append(t)
-    
+

@@ -1,6 +1,6 @@
 class Alarme:
   codigo = 0
-  horaA = '20'
+  horaA = '20:00:00'
   ativo = True
 
   def redefinirAlarme(self):

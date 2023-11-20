@@ -8,5 +8,5 @@ class Televisao:
         self.canal = canal
         self.volume = volume
 
-    def __str__(self):
+    def __str__(self):  
         return f'Canal: {self.canal}, Volume: {self.volume}'
